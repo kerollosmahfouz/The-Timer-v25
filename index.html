@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#757682">
+    <title>The Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- Menu icon import -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+    <div class="header">
+        <div style="display: flex;align-items: center;">
+            <span class="material-symbols-outlined">
+                timer
+            </span>
+            <h2>The Timer</h2>
+        </div>
+        <div style="display: flex;align-items: center;">
+            <span class="material-symbols-outlined" id="menu_icon" style="cursor: pointer;">
+                menu
+            </span>
+            <ul id="header_menu">
+                <li><input type="checkbox" id="cbfbir" checked style="cursor: pointer;">
+                    <label for="cbfbir" style="width: 100%;cursor: pointer;">Birthday</label>
+                </li>
+                <li><input type="checkbox" id="cbfeoty" checked style="cursor: pointer;">
+                    <label for="cbfeoty" style="width: 100%;cursor: pointer;">End of The Year</label>
+                </li>
+                <li><input type="checkbox" id="cbfct" checked style="cursor: pointer;">
+                    <label for="cbfct" style="width: 100%;cursor: pointer;">Custom Timer</label>
+                </li>
+                <!-- <li>Contact Us</li> -->
+                <li class="about" style="justify-content: space-between;">About <p
+                        style="font-size: x-small;font-size: 10px;margin-right: 8px;">v2025</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="birthday" class="section">
+        <div class="timer">
+            <div class="days" id="birdays"></div>
+            <div class="hours" id="birhours"></div>
+            <div class="minutes" id="birminutes"></div>
+            <div class="seconds" id="birseconds"></div>
+        </div>
+        <div>
+            <h3>Next Birthday</h3>
+        </div>
+        <div>
+            <input type="date" id="input_Birthday" class="date_input">
+            <input type="button" id="Reset-Birthday-Button" class="button" value="Reset Birthday">
+        </div>
+        <div class="birthday_title title" style="padding: 15px;"></div>
+    </div>
+    <div class="eoty section">
+        <div class="timer">
+            <div class="days" id="eotydays"></div>
+            <div class="hours" id="eotyhours"></div>
+            <div class="minutes" id="eotyminutes"></div>
+            <div class="seconds" id="eotyseconds"></div>
+        </div>
+        <div>
+            <h3>End Of The Year</h3>
+        </div>
+    </div>
+    <div class="custom_timer section">
+        <div class="timer">
+            <div class="days" id="ctdays"></div>
+            <div class="hours" id="cthours"></div>
+            <div class="minutes" id="ctminutes"></div>
+            <div class="seconds" id="ctseconds"></div>
+        </div>
+        <div>
+            <h3>Custom</h3>
+        </div>
+        <div>
+            <input type="date" id="input_ct" class="date_input">
+            <input type="button" id="Reset_ct_button" class="button" value="Reset Custom Time">
+        </div>
+        <div class="ct_title title" style="padding: 15px;"></div>
+    </div>
+    </div>
+
+</body>
+<script src="main.js"></script>
+
+</html>

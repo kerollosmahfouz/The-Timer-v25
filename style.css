@@ -1,0 +1,209 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    margin: 0;
+    /*background-color: var(--main-dark-color);*/
+}
+
+:root {
+    --main-color: rgb(156 160 176);
+    --sec-color: #777887;
+    --main-dark-color: #9193a8;
+    --unit-color: #757682;
+    --header-color: #757682;
+}
+
+/* Start Header */
+
+.header {
+    width: calc(100% - 20px);
+    height: 60px;
+    background-color: var(--header-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+
+.header span {
+    font-size: 55px;
+    user-select: none;
+}
+
+.header h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 34px;
+    margin: 0 50px 0 0;
+}
+
+.header ul {
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    background-color: var(--main-color);
+    width: 150px;
+    right: -50px;
+    top: -50px;
+    border-radius: 10px;
+    transition: 0.3s;
+    transform: scale(0);
+}
+
+.header ul.show {
+    display: block;
+    transform: scale(1);
+    top: 40px;
+    right: 17px;
+}
+
+.header ul li {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.header ul li label {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header ul li:hover {
+    background-color: var(--sec-color);
+}
+
+/* End Header */
+.date_input {
+    height: 25px;
+}
+
+.button {
+    height: 29px;
+    cursor: pointer;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+    width: 130px;
+    height: 100px;
+    background-color: var(--unit-color);
+    margin: 10px;
+    text-align: center;
+    font-size: 80px;
+    border-radius: 20%;
+    box-shadow: 5px 5px 10px 0;
+}
+
+h3 {
+    font-family: 'Shantell Sans', cursive;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Shantell Sans', cursive;
+    font-size: 20px;
+}
+
+.timer {
+    display: flex;
+}
+
+.section {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 45px;
+}
+
+@media (max-width:600px) {
+    .header {
+        height: 45px;
+    }
+
+    .header span {
+        font-size: 40px;
+    }
+
+    .header h2 {
+        font-size: 30px;
+    }
+
+    .header ul.show {
+        top: 20px;
+    }
+
+    .date_input {
+        height: 21px;
+    }
+
+    .button {
+        height: 25px;
+        cursor: pointer;
+    }
+
+    .days,
+    .hours,
+    .minutes,
+    .seconds {
+        width: 70px;
+        height: 50px;
+        margin: 10px;
+        font-size: 40px;
+    }
+}
+
+@media (max-width:370px) {
+    .header {
+        height: 30px;
+    }
+
+    .header span {
+        font-size: 27px;
+    }
+
+    .header h2 {
+        font-size: 17px;
+    }
+
+    .header ul.show {
+        top: 13px;
+        width: 130px;
+        font-size: 13px;
+    }
+
+    .days,
+    .hours,
+    .minutes,
+    .seconds {
+        width: 50px;
+        font-size: 30px;
+        height: 40px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .section {
+        margin-bottom: 25px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    #input_birthday {
+        width: 100px;
+        height: 20px;
+    }
+
+    #Reset_Birthday_Button {
+        height: 24px;
+        width: 100px;
+    }
+}
